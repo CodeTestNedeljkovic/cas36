@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ovo je neki moj naslov!</h1>
+    <h2>Saljem preko express-a</h2>
+    <table>
+        <tr><th>HTTP metoda</th><th>Ruta</th><th>Znacenje</th></tr>
+        <tr><td>GET</td><td>/</td><td>Vrati index stranicu</td></tr>
+        <tr><td>GET</td><td>/contact</td><td>Vrati kontakt stranicu</td></tr>
+        <button id="dohvati">Dohvati korisnike</button>
+        <p id="korisnici"></p>
+        <!-- DOMACI -->
+        <input id="brisi" type="number" />
+        <button id="obrisi">Obrisi</button>
+        <script>
+            document.querySelector("#dohvati").addEventListener("click", () => {
+                fetch('http://localhost:3000/users').then(data => data.json()).then(data => {
+                    let newA = data.map((e) => e.name);
+                    document.querySelector('#korisnici').innerHTML = `Korisnici: ${newA.join(', ')}`;
+                });
+            });
+        </script>
+    </table>
+</body>
+</html>

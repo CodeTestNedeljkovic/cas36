@@ -73,4 +73,50 @@
 //     console.log('pozvan je port 5000');
 // });
 
+// const express = require("express");
+// const fs = require("fs");
 
+// const app = express();
+// const port = 3000;
+
+// app.get('/', (req, res) => {
+//     fs.readFile("index.html", "utf-8", (err, data) => {
+//         if (err) {
+//             throw err;
+//         }
+//         res.send(data);
+//     });
+// });
+// app.get('/contact', (req, res) => {
+//     fs.readFile("pages/contact.html", "utf-8", (err, data) => {
+//         if (err) {
+//             throw err;
+//         }
+//         res.send(data);
+//     });
+// });
+// app.listen(port, () => {
+//     console.log('aplikacija je spremna za slusanje...');
+// });
+
+const express = require("express");
+const path = require("path");
+
+const app = express();
+const port = 3000;
+korisnici = [{name: 'Marko', id: 1}, {name: 'Nikola', id: 2}];
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'pages', 'contact.html'));
+});
+app.get('/users', (req, res) => {
+    res.send(JSON.stringify(korisnici));
+});
+app.listen(port, () => {
+    console.log('listening...');
+});
+// pages/contact.html
+// pages\contact.html
