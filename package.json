@@ -15,5 +15,8 @@
     "cas36"
   ],
   "author": "Comtrade",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "got": "^12.5.3"
+  }
 }
