@@ -17,6 +17,6 @@
   "author": "Comtrade",
   "license": "ISC",
   "dependencies": {
-    "got": "^12.5.3"
+    "express": "^4.18.2"
   }
 }
