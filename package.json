@@ -7,7 +7,8 @@
     "start": "node index",
     "test123": "node test123",
     "test": "node test",
-    "deploy": "node deploy"
+    "deploy": "node deploy",
+    "pushtogit": "git add . && git commit -m 'Poruka' && git push"
   },
   "keywords": [
     "projekat",
