@@ -1,0 +1,18 @@
+{
+  "name": "cas36",
+  "version": "1.2.3",
+  "description": "Ovo je nas novi projekat",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test123": "node test123",
+    "test": "node test",
+    "deploy": "node deploy"
+  },
+  "keywords": [
+    "projekat",
+    "cas36"
+  ],
+  "author": "Comtrade",
+  "license": "ISC"
+}
